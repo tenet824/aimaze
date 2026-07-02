@@ -215,7 +215,7 @@ vector<Event> GameEngine::handleSkill(const Action& action)
     damaged.bossIndex = boss.currentBoss;
     events.push_back(damaged);
 
-    skill.currentCD = skill.cooldown;
+    skill.currentCD = skill.cooldown + 1;
     ++boss.currentRound;
 
     if (boss.hpList[boss.currentBoss] <= 0)

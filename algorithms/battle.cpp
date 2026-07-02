@@ -20,7 +20,7 @@ vector<int> cooldownAfterUse(const vector<int>& currentCooldowns,
                              int usedSkill)
 {
     vector<int> nextCooldowns = currentCooldowns;
-    nextCooldowns[usedSkill] = skills[usedSkill].cooldown;
+    nextCooldowns[usedSkill] = skills[usedSkill].cooldown + 1;
     for (int& cooldown : nextCooldowns)
     {
         if (cooldown > 0)
